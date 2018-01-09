@@ -8,7 +8,7 @@ trap 'rm -f "$TEST_CONFIG_FILE"' EXIT
 echo "Testing configuration"
 erb /logstash.config.erb > "$TEST_CONFIG_FILE"
 
-if "/logstash-${LOGSTASH_VERSION}/bin/logstash" -f "$TEST_CONFIG_FILE" --configtest; then
+if "/logstash-${LOGSTASH_VERSION}/bin/logstash" -f "$TEST_CONFIG_FILE" --config.test_and_exit; then
   echo "Deploying!"
   exit 0
 else
