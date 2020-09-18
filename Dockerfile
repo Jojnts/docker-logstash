@@ -19,4 +19,4 @@ ADD bin/checkconfig.sh /logstash-checkconfig.sh
 # them when deploying, but they'll be run in test.sh
 ADD test /tmp/test
 
-EXPOSE 80 5044 9600
+EXPOSE 12201 5044 9600
