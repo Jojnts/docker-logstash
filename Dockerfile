@@ -2,6 +2,7 @@ FROM docker.elastic.co/logstash/logstash:7.9.1
 
 # Don’t retain the example config from the base image.
 RUN rm -f /usr/share/logstash/pipeline/logstash.conf
+RUN rm -f /usr/share/logstash/config/logstash.yml
 
 # Every file in the directory /usr/share/logstash/pipeline/ will be
 # parsed by Logstash as pipeline configuration.
