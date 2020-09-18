@@ -1,7 +1,12 @@
 FROM docker.elastic.co/logstash/logstash:7.9.1
 
-# Add logstash run scripts and configuration
-ADD config/logstash.config /logstash.config
+# Don’t retain the example config from the base image.
+RUN rm -f /usr/share/logstash/pipeline/logstash.conf
+
+# Every file in the directory /usr/share/logstash/pipeline/ will be
+# parsed by Logstash as pipeline configuration.
+ADD config/logstash.config /usr/share/logstash/pipeline/logstash.conf
+
 ADD bin/run-logstash.sh /run-logstash.sh
 ADD bin/checkconfig.sh /logstash-checkconfig.sh
 
@@ -10,4 +15,3 @@ ADD bin/checkconfig.sh /logstash-checkconfig.sh
 ADD test /tmp/test
 
 EXPOSE 80
-CMD ["-f /logstash.config"]
