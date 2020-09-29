@@ -1,1 +1,1 @@
-web: logstash -l /dev/null
+web: logstash
