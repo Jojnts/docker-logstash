@@ -6,9 +6,9 @@ TEST_CONFIG_FILE="$(mktemp)"
 trap 'rm -f "$TEST_CONFIG_FILE"' EXIT
 
 echo "Testing configuration"
-erb /logstash.config.erb > "$TEST_CONFIG_FILE"
+cp /usr/share/logstash/pipeline/logstash.conf "$TEST_CONFIG_FILE"
 
-if "/logstash-${LOGSTASH_VERSION}/bin/logstash" -f "$TEST_CONFIG_FILE" --config.test_and_exit; then
+if "logstash" -f "$TEST_CONFIG_FILE" --config.test_and_exit; then
   echo "Deploying!"
   exit 0
 else

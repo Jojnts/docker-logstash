@@ -1,1 +1,1 @@
-web: /run-logstash.sh
+web: logstash
