@@ -2,5 +2,7 @@ http.host: "0.0.0.0"
 
 pipeline:
   batch:
-    # Max batch size in ES is 100mb
-    size: 100
+    # The maximum number of events an individual worker thread
+    # will collect from inputs before attempting to execute
+    # its filters and outputs.
+    size: 50
