@@ -1,1 +1,1 @@
-web: logstash --log.level debug
+web: logstash --log.level ${LOGLEVEL:-info}
