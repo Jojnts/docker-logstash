@@ -5,4 +5,4 @@ pipeline:
     # The maximum number of events an individual worker thread
     # will collect from inputs before attempting to execute
     # its filters and outputs.
-    size: 50
+    size: 10
