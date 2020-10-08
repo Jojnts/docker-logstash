@@ -8,5 +8,5 @@ pipeline:
     # its filters and outputs.
     size: 10
 
-xpack.monitoring.enabled: true
+xpack.monitoring.enabled: false
 xpack.monitoring.elasticsearch.url: $ELASTICSEARCH_URL
