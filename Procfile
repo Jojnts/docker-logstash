@@ -1,1 +1,1 @@
-web: logstash
+web: logstash --log.level fatal
