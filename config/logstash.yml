@@ -1,4 +1,5 @@
 http.host: "0.0.0.0"
+path.config: /usr/share/logstash/pipeline
 
 pipeline:
   batch:
@@ -6,3 +7,6 @@ pipeline:
     # will collect from inputs before attempting to execute
     # its filters and outputs.
     size: 10
+
+xpack.monitoring.enabled: true
+xpack.monitoring.elasticsearch.url: $ELASTICSEARCH_URL

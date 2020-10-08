@@ -1,4 +1,5 @@
-FROM docker.elastic.co/logstash/logstash:7.9.1
+FROM docker.elastic.co/logstash/logstash:5.6.16
+
 
 # Logstash has two types of configuration files: *pipeline* and *configuration* files
 
