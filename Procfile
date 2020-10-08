@@ -1,1 +1,1 @@
-web: logstash -f pipeline/logstash.conf
+web: logstash
