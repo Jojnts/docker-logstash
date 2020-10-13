@@ -14,6 +14,8 @@ RUN rm -f /usr/share/logstash/config/logstash.yml
 ADD config/logstash.config /usr/share/logstash/pipeline/logstash.conf
 ADD config/logstash.yml /usr/share/logstash/config/logstash.yml
 
+ADD config/ja_index_template.json /usr/share/logstash/index_template/ja_index_template.json
+
 ADD bin/checkconfig.sh /logstash-checkconfig.sh
 
 EXPOSE 12201
