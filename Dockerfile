@@ -18,4 +18,6 @@ ADD config/ja_index_template.json /usr/share/logstash/index_template/ja_index_te
 
 ADD bin/checkconfig.sh /logstash-checkconfig.sh
 
+CMD ["-f", "/usr/share/logstash/pipeline/logstash.conf"]
+
 EXPOSE 12201
