@@ -12,6 +12,5 @@ infrastructure.
 * Logstash settings is located at [config/logstash.yml](config/logstash.yml).
 
 # Run locally
-If you'd like to run this Logstash on your local machine you need to replace the configuration
-and pipeline settings with your own. Probably, the easiest way is to run this Logstash via the [docker-compose.yml](https://github.com/Jojnts/jojnts-service/blob/develop/docker-compose.yml)
+If you'd like to run this Logstash on your local machine the easiest way is to run this Logstash via the [docker-compose.yml](https://github.com/Jojnts/jojnts-service/blob/develop/docker-compose.yml)
 from our main repo. It is configured to run Logstash with an appropriate configuration.
