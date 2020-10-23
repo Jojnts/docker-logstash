@@ -18,6 +18,10 @@ ADD config/ja_index_template.json /usr/share/logstash/index_template/ja_index_te
 
 ADD bin/checkconfig.sh /logstash-checkconfig.sh
 
+# Install the JWT decode filter.
+# We use it to decode Postgraphile JWT tokens
+RUN bin/logstash-plugin install logstash-filter-jwt_decode
+
 CMD ["-f", "/usr/share/logstash/pipeline/logstash.conf"]
 
 EXPOSE 12201
