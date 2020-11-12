@@ -7,4 +7,4 @@ pipeline:
     # The maximum number of events an individual worker thread
     # will collect from inputs before attempting to execute
     # its filters and outputs.
-    size: ${BATCH_SIZE:10}
+    size: ${BATCH_SIZE:50}
